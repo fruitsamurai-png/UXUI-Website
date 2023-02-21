@@ -16,6 +16,11 @@ body {
     color: #fff;
     padding: 20px;
   }
+  h1:hover {
+    color: rgb(139, 132, 132);
+    cursor: pointer;
+  }
+  
   nav ul {
     list-style-type: none;
     margin: 0;
@@ -52,4 +57,7 @@ body {
   
   .button:hover {
     background-color: #999;
+  }
+  #schedule-event-main{
+    margin-top: -50px;
   }
