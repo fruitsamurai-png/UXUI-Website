@@ -16,7 +16,7 @@ body {
     color: #fff;
     padding: 20px;
   }
-  h1:hover {
+  #logo-button:hover {
     color: rgb(139, 132, 132);
     cursor: pointer;
   }
@@ -58,6 +58,6 @@ body {
   .button:hover {
     background-color: #999;
   }
-  #schedule-event-main{
-    margin-top: -50px;
+  .subheader1{
+    margin-top: -30px;
   }

@@ -4,6 +4,7 @@ const accountButton = document.getElementById('accountbutton');
 const trainingButton = document.getElementById('trainingbutton');
 const equipmentButton = document.getElementById('equipmentbutton');
 const DragonButton = document.getElementById('little-dragonbutton');
+const beltbutton = document.getElementById('beltbutton');
 const mainContent = document.querySelector('main');
 const logoButton = document.getElementById('logo-button');
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,17 +12,67 @@ document.addEventListener('DOMContentLoaded', function() {
   // Your code that refers to mainContent goes here
 
   // Add a click event listener to the button
-  if (scheduleButton && mainContent) {
-    scheduleButton.addEventListener('click', function() {
-      // Navigate to another page
-      console.log("hello");
-      fetch('./Layouts/schedule.html')
-      .then(response => response.text())
-      .then(data => {
-        mainContent.innerHTML = data;
-      });
-    });//end listener for button
-  }
+  scheduleButton.addEventListener('click', function() {
+    // Navigate to another page
+    var script = document.createElement('script');
+    script.src = './Scripts/Schedule.js';
+    fetch('./Layouts/schedule.html')
+    .then(response => response.text())
+    .then(data => {
+      mainContent.innerHTML = data;
+      mainContent.appendChild(script);//dynamically add scripts
+    });
+  });//end listener for button
+
+  // Add a click event listener to the button
+  accountButton.addEventListener('click', function() {
+    // Navigate to another page
+    fetch('./Layouts/account.html')
+    .then(response => response.text())
+    .then(data => {
+      mainContent.innerHTML = data;
+    });
+  });//end listener for button
+
+  // Add a click event listener to the button
+  trainingButton.addEventListener('click', function() {
+    // Navigate to another page
+    fetch('./Layouts/training.html')
+    .then(response => response.text())
+    .then(data => {
+      mainContent.innerHTML = data;
+    });
+  });//end listener for button
+
+  // Add a click event listener to the button
+  equipmentButton.addEventListener('click', function() {
+    // Navigate to another page
+    fetch('./Layouts/equipment.html')
+    .then(response => response.text())
+    .then(data => {
+      mainContent.innerHTML = data;
+    });
+  });//end listener for button
+
+  // Add a click event listener to the button
+  DragonButton.addEventListener('click', function() {
+    // Navigate to another page
+    fetch('./Layouts/little-dragon.html')
+    .then(response => response.text())
+    .then(data => {
+      mainContent.innerHTML = data;
+    });
+  });//end listener for button
+
+  // Add a click event listener to the button
+  beltbutton.addEventListener('click', function() {
+    // Navigate to another page
+    fetch('./Layouts/belt.html')
+    .then(response => response.text())
+    .then(data => {
+      mainContent.innerHTML = data;
+    });
+  });//end listener for button
 
   logoButton.addEventListener('click', function() {
     // Navigate to the home page

@@ -1,9 +1,24 @@
 <html> 
   <main>
-        <section id="schedule-event-main">
-          <h1>Schedule</h1>
-          <p>Here you can view the schedule and latest events of all classes and training sessions.</p>
-        </section>
-      <script src="./Scripts/Schedule.js"></script>
+    <section id="schedule-event-main" >
+      <h1 class="subheader1">Schedule</h1>
+      <p>Here you can view the schedule and latest events of all classes and training sessions.</p>
+        <div class="calendar">
+          <div class="calendar-header">
+            <button id="prev-month">&#8249;</button>
+            <h2 id="current-month"></h2>
+            <button id="next-month">&#8250;</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="weekday">Sun</div>
+            <div class="weekday">Mon</div>
+            <div class="weekday">Tue</div>
+            <div class="weekday">Wed</div>
+            <div class="weekday">Thu</div>
+            <div class="weekday">Fri</div>
+            <div class="weekday">Sat</div>
+          </div>
+        </div>
+    </section>
   </main>
 </html>
