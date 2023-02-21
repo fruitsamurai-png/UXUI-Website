@@ -41,3 +41,15 @@ body {
     padding: 10px;
     text-align: center;
   }
+  .button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #ccc;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 0.3em;
+  }
+  
+  .button:hover {
+    background-color: #999;
+  }
