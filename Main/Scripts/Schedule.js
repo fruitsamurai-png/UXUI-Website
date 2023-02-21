@@ -3,6 +3,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June',
 
 const calendarHeader = document.querySelector('.calendar-header');
 const currentMonth = document.querySelector('#current-month');
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 let currentDate = new Date();
 let currentYear = currentDate.getFullYear();
@@ -19,6 +20,10 @@ function updateCalendar() {
   // Clear the calendar grid
   const calendarGrid = document.querySelector('.calendar-grid');
   calendarGrid.innerHTML = '';
+  // Add the days of the week to the calendar grid
+  for (let i = 0; i < 7; i++) {
+    calendarGrid.innerHTML += '<div class="day-name">' + weekdays[i] + '</div>';
+  }
   // Add the days of the month to the calendar grid
   for (let i = 0; i < firstDayIndex; i++) {
     calendarGrid.innerHTML += '<div class="day"></div>';
@@ -26,9 +31,7 @@ function updateCalendar() {
   for (let i = 1; i <= daysInMonth; i++) {
     calendarGrid.innerHTML += '<div class="day">' + i + '</div>';
   }
-  console.log("help")
 }
-
 updateCalendar();
 
 document.querySelector('#prev-month').addEventListener('click', function() {
