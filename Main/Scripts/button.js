@@ -10,7 +10,7 @@ const logoButton = document.getElementById('logo-button');
 document.addEventListener('DOMContentLoaded', function() {
   const mainContent = document.querySelector('main');
   // Your code that refers to mainContent goes here
-
+  
   // Add a click event listener to the button
   scheduleButton.addEventListener('click', function() {
     // Navigate to another page
@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.text())
     .then(data => {
       mainContent.innerHTML = data;
-      mainContent.appendChild(script);//dynamically add scripts
+      // Add an onload event listener to the script element to ensure that the script is loaded before it is executed
+      script.onload = function() {
+        console.log('Schedule.js loaded');
+        initSchedule(); // Call the function after the script has been loaded
+      };
+      document.head.appendChild(script);
     });
   });//end listener for button
 
